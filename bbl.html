@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BLACKOUT // Security Center</title>
+  <link rel="stylesheet" href="bbl.css">
+</head>
+<body>
+  <div id="intro" class="overlay">
+    <div class="intro-box">
+      <div class="glitch">BLACKOUT</div>
+      <p>ADVANCED SECURITY OPERATIONS</p>
+      <p class="muted">Simulation interactive • Mode local</p>
+      <button id="start">INITIALISER LA SESSION</button>
+    </div>
+  </div>
+
+  <header>
+    <div class="brand">BLACKOUT <span>// SOC</span></div>
+    <div class="live"><i></i> SYSTEM ONLINE</div>
+    <div id="clock">00:00:00</div>
+  </header>
+
+  <main>
+    <section class="top">
+      <div>
+        <small>SECURITY OPERATIONS CENTER</small>
+        <h1>Incident <span id="incident">#BK-0091</span></h1>
+        <p class="muted">Surveillance locale de l'environnement navigateur</p>
+      </div>
+      <button class="danger" data-action="stop">TERMINER</button>
+    </section>
+
+    <section class="metrics">
+      <article><small>MENACE</small><strong id="threat">0%</strong></article>
+      <article><small>ÉVÉNEMENTS</small><strong id="events">0</strong></article>
+      <article><small>SESSION</small><strong id="session">ACTIVE</strong></article>
+      <article><small>INTÉGRITÉ</small><strong id="integrity">100%</strong></article>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <div class="panel-head">FLUX D'ÉVÉNEMENTS <span class="red">● LIVE</span></div>
+        <div id="logs" class="logs">
+          <p class="muted">En attente d'initialisation...</p>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">ENVIRONNEMENT LOCAL</div>
+        <div id="device" class="details">
+          <p>Analyse en attente...</p>
+        </div>
+        <div class="actions">
+          <button data-action="scan">ANALYSER</button>
+          <button data-action="fullscreen">PLEIN ÉCRAN</button>
+          <button data-action="notify">NOTIFICATION</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">CENTRE D'INCIDENT</div>
+        <h2 id="incidentTitle">Aucun incident</h2>
+        <p id="incidentText" class="muted">Initialise la session pour commencer.</p>
+        <div class="progress"><div id="bar"></div></div>
+        <div class="actions">
+          <button data-action="investigate">ENQUÊTER</button>
+          <button data-action="isolate">ISOLER</button>
+          <button data-action="restore">RESTAURER</button>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">EXPLORATEUR FICTIF</div>
+        <div id="files" class="files"></div>
+        <p class="muted tiny">Données fictives créées dans cette démonstration.</p>
+        <button data-action="files">ACTUALISER</button>
+      </article>
+    </section>
+
+    <section class="panel terminal">
+      <div class="panel-head">BLACKOUT TERMINAL <span class="red">ROOT@LOCAL</span></div>
+      <div id="output" class="output">
+        <p>BLACKOUT OS [Version 9.1]</p>
+        <p>Console locale initialisée.</p>
+        <p>Tape <b>help</b> pour afficher les commandes.</p>
+      </div>
+      <form id="commandForm">
+        <span>root@blackout:~$</span>
+        <input id="command" autocomplete="off" placeholder="Entrez une commande..." autofocus>
+        <button>EXEC</button>
+      </form>
+    </section>
+
+    <footer>BLACKOUT // LOCAL BROWSER SIMULATION // NO REAL SYSTEM ACCESS</footer>
+  </main>
+
+  <div id="toast"></div>
+
+  <div id="reveal" class="overlay hidden">
+    <div class="intro-box">
+      <div class="glitch">FIN DE SESSION</div>
+      <h2 id="ending">Simulation terminée.</h2>
+      <p id="endingText">Aucun système réel n'a été compromis.</p>
+      <button id="restart">RECOMMENCER</button>
+    </div>
+  </div>
+
+  <script src="bbl.js"></script>
+</body>
+</html>
